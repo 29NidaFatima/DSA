@@ -1,6 +1,32 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Function {
+
+  
+    //to check a number is prime or not
+    public static boolean isPrime(int n){
+     //corner case for 2
+     if (n==2) {
+        return true;
+     }
+       for(int i=2; i<=Math.sqrt(n);i++){
+        if (n%i==0) {  // condition for number is not prime
+            return false;
+            
+        }
+       }
+       return true;
+    }
+      // print all prime number in a range
+      public static void primeIsRange(int n){
+        for(int i=2; i<=n;i++){
+           if (isPrime(i)==true) { //true
+            System.out.println(i+" ");
+           }
+          
+        }
+        System.out.println();
+    }
     // function overloading using different no.of parameters
     public static int sum(int a,int b){
         return a+b;
@@ -57,6 +83,7 @@ return binomialcoefficient;
     System.out.println("Hello World");
     }
     public static void main(String[] args) {
+ primeIsRange(20);
         System.out.println(sum(5, 7));
        System.out.println(sum(2.3f,4.5f));
 //Binomial Coefficient
