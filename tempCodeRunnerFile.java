@@ -1,0 +1,1 @@
+decToBin(7);
