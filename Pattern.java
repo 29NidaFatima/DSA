@@ -1,13 +1,45 @@
 public class Pattern {
+    // public static void printNumberPyramid(int n){
+    //     for (int i = 1; i <= n; i++) {
+    //         //spaces
+    //         for (int j = 1; j <=n - i; j++) {
+    //             System.out.print(" ");
+    //         }
+    //         //number
+    //         for (int j = 1; j <= i; j++) {
+    //             System.out.print(i + " ");
+    //         }
+
+    //         System.out.println();
+    //     }
+    // }
+    public static void palindromicPattern(int n){
+        for (int i = 1; i <= n; i++) {
+                     //spaces
+            for (int j = 1; j <= n- i; j++) {
+                System.out.print(" ");
+            } 
+            //Descending order
+            for(int j=i; j>=1;j--){
+                System.out.print(j);
+            }
+            //ascending order
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+   
+    }
     public static void main(String[] args) {
         // Q1=SOLID RECTANGLE
         // OUTER LOOP
         // for (int i = 1; i <= 4; i++) {
-        //     // INNER LOOP
-        //     for (int j = 1; j <= 5; j++) {
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
+        // // INNER LOOP
+        // for (int j = 1; j <= 5; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
         // }
         // Q2=HOLLOW RECTANGLE
         // int n=4;
@@ -54,7 +86,7 @@ public class Pattern {
         // }
         // System.out.println();
         // }
-         // -------------------------------------------------
+        // -------------------------------------------------
         // int n=4;
         // //outer loop
         // for(int i=n; i>=1; i--){
@@ -78,7 +110,7 @@ public class Pattern {
         // }
         // System.out.println();
         // }
-       
+
         // Q7- INVERTED HALF PYRAMID WITH NUMBERS
         // int n=5;
         // // outer loop
@@ -114,15 +146,20 @@ public class Pattern {
         // System.out.println();
         // }
         // Q10-Print Character Pattern
-        int n=5;
-         char ch='A';
-         for(int line=1; line<=n; line++){
-            for(int chars=1; chars<=line; chars++){
-                System.out.print(ch + " ");
-                ch++;
-            }
-            System.out.println();
-         }
-
+        // int n=5;
+        // char ch='A';
+        // for(int line=1; line<=n; line++){
+        // for(int chars=1; chars<=line; chars++){
+        // System.out.print(ch + " ");
+        // ch++;
+        // }
+        // System.out.println();
+        // }
+        // Advance pattern question
+        // number pyramid
+        // printNumberPyramid(6);
+        palindromicPattern(5);
+       
+        
     }
 }
