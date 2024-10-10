@@ -51,6 +51,7 @@ System.out.print(arr[i] + " ");
         int arr[]={3,6,2,1,8,7,4,5,3,1};
         bubbleSort(arr);
         printArr(arr);
+        
         selectionSort(arr);
         printArr(arr);
     }
