@@ -4,6 +4,7 @@ import java.util.Collections;
 
 public class BasicSort {
     Bubble Sort
+
     public static void bubbleSort(int arr[]) {
         for (int turn = 0; turn < arr.length - 1; turn++) {
             for (int j = 0; j < arr.length - 1 - turn; j++) {
@@ -53,12 +54,12 @@ public class BasicSort {
         for (int i = 1; i < arr.length; i++) {
             int curr = arr[i];
             int pre = i - 1;
-            // // finding out correct position 
+            // // finding out correct position
             while (pre >= 0 && arr[pre] > curr) {
                 arr[pre + 1] = arr[pre];
                 pre--;
             }
-            //  // Insertion
+            // // Insertion
             arr[pre + 1] = curr;
         }
     }
@@ -112,16 +113,16 @@ public class BasicSort {
         // InsertionSort
         insertionSort(arr);
         printArr(arr);
-   
-   
-         //Inbuilt Sort
+
+        // Inbuilt Sort
         Arrays.sort(arr);
         printArr(arr);
-        //  if you want to sort a part of array's then you can specify index but ending index is exuluded
-        Arrays.sort(arr,0,3);
+        // if you want to sort a part of array's then you can specify index but ending
+        // index is exuluded
+        Arrays.sort(arr, 0, 3);
         printArr(arr);
-        //if you want  to sort an array in descending order with given index
-        Arrays.sort(arr,0,3,Collections.reverseOrder());
+        // if you want to sort an array in descending order with given index
+        Arrays.sort(arr, 0, 3, Collections.reverseOrder());
         printArr(arr);
         // Counting Sort
         countingSort(arr);
