@@ -91,7 +91,7 @@ public static int diagonalSum(int matrix[][]){
             if(i==j){
                 sum = sum + matrix[i][j];
             }
-    // // Secondary  Diagonal
+    //  Secondary  Diagonal
            else if(i+j==matrix.length-1){
             sum = sum + matrix[i][j];
             }
@@ -163,11 +163,12 @@ searchSmallest(matrix);
         // --------SPIRAL MATRIX---------
         int matrix[][] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
         printSpiral(matrix);
-         //---------------DIAGONAL SUM------------
+
+        //---------------DIAGONAL SUM------------
          int matrix[][] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
         int sum= diagonalSum(matrix);
         System.out.println("Sum of primary and secondary diagonal:"+ sum);
-       ----SEARCH IN SORTED MATRIX-----
+       //----SEARCH IN SORTED MATRIX-----
 
         int matrix[][] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
         int key=9;
