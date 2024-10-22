@@ -54,17 +54,7 @@ public static void transpose(int arr[][]) {
     
    
 }
-// ------------Another method------
-public static void transpose(int arr[][]) {
-    for (int i = 0; i < arr[0].length; i++) {  
-        for (int j = 0; j < arr.length; j++) { 
-            int transpose = arr[j][i];        
-            System.out.print(transpose + " "); 
-        }
-        System.out.println();
 
-}
-}
    public static void main(String[] args) {
      // Q1
     int array[][]= { {4,7,8}, {8,8,7} };
