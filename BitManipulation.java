@@ -1,6 +1,6 @@
 public class BitManipulation {
     Q1-Check if a Numberis Even or Odd
- 
+
     public static void oddOrEven(int n) {
         int bitMask = 1;
         if ((n & bitMask) == 0) {
@@ -150,13 +150,13 @@ public class BitManipulation {
         // clear ith bit
         int result = clearIthBit(10, 1);
         System.out.println("Ith bit is:" + result);
-        // Update ith bit
+        Update ith bit
         updateIthBit(10, 2, 1);
         // Clear Last i bits
         int result = clearLastIbit(15, 2);
         System.out.println(result);
         // Clear Range of bits
-        System.out.println(clearBitsInRange(10, 2, 4));
+        System.out.println(clearBitsInRange( 2514, 2, 7));
         // check if a number is power of 2
         System.out.println(isPowerofTwo(4));
         System.out.println(countSetBits(10));
