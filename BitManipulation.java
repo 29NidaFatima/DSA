@@ -1,9 +1,6 @@
 public class BitManipulation {
-    Q1-Check if
-    a Number
-    is Even
-    or Odd
-
+    Q1-Check if a Numberis Even or Odd
+ 
     public static void oddOrEven(int n) {
         int bitMask = 1;
         if ((n & bitMask) == 0) {
@@ -99,8 +96,6 @@ public class BitManipulation {
     // Modular exponentiation
     public static int modularExponentiation(int a, int b, int m) {
         int result = 1;
-        a = a % m; // Update a if it is more than or equal to m
-
         while (b > 0) {
             // If b is odd, multiply result by current a
             if (b % 2 == 1) {
