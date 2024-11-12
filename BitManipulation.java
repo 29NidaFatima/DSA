@@ -95,17 +95,17 @@ public class BitManipulation {
 
     // Modular exponentiation
     public static int modularExponentiation(int a, int b, int m) {
-        int result = 1;
+        int ans = 1;
         while (b > 0) {
             // If b is odd, multiply result by current a
             if (b % 2 == 1) {
-                result = (result * a) % m;
+                ans = (ans * a) % m;
             }
             // Square a and reduce b by half
             a = (a * a) % m;
             b /= 2;
         }
-        return result;
+        return ans;
     }
 
     // Different method
@@ -161,7 +161,7 @@ public class BitManipulation {
         System.out.println(isPowerofTwo(4));
         System.out.println(countSetBits(10));
         // Fast exponentiation
-        System.out.println(fastExpo(3, 5));
+        System.out.println( "Result: " + fastExpo(3, 5));
         // Modular exponentiation
         int a = 3;
         int b = 13;
