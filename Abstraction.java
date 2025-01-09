@@ -14,6 +14,15 @@ public class Abstraction {
         // Hierarchy of constructor
         Mustang myHorse = new Mustang();
         // Animal-->Horse-->Mustang
+
+        // Interfaces
+        Queen q=new Queen();
+        q.moves();
+        Bear bear = new Bear();
+        
+        // Call methods from both interfaces
+        bear.eatPlants();
+        bear.eatMeat();
     }
 }
 
@@ -65,5 +74,48 @@ class Chicken extends Animal {
 
     void walk() {
         System.out.println("walks on 2 legs");
+    }
+}
+
+// Interfaces
+interface ChessPlayer {
+void moves(); // by default it is public.abstract
+     
+}
+class Queen implements ChessPlayer{
+  public  void moves(){
+        System.out.println("up.down,left,right,diagonal");
+    }
+}
+class Rook implements ChessPlayer{
+    public  void moves(){
+          System.out.println("up.down,left,right");
+      }
+  }
+  class King implements ChessPlayer{
+    public  void moves(){
+          System.out.println("up.down,left,right,diagonal(by 1 step)");
+      }
+  }
+ // Define the Herbivore interface
+interface Herbivore {
+    void eatPlants();
+}
+
+// Define the Carnivore interface
+interface Carnivore {
+    void eatMeat();
+}
+
+// Implementing both interfaces in a class
+class Bear implements Herbivore, Carnivore {
+   
+    public void eatPlants() {
+        System.out.println("The bear is eating plants.");
+    }
+
+
+    public void eatMeat() {
+        System.out.println("The bear is eating meat.");
     }
 }
