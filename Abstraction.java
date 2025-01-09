@@ -16,10 +16,10 @@ public class Abstraction {
         // Animal-->Horse-->Mustang
 
         // Interfaces
-        Queen q=new Queen();
+        Queen q = new Queen();
         q.moves();
         Bear bear = new Bear();
-        
+
         // Call methods from both interfaces
         bear.eatPlants();
         bear.eatMeat();
@@ -79,25 +79,29 @@ class Chicken extends Animal {
 
 // Interfaces
 interface ChessPlayer {
-void moves(); // by default it is public.abstract
-     
+    void moves(); // by default it is public.abstract
+
 }
-class Queen implements ChessPlayer{
-  public  void moves(){
+
+class Queen implements ChessPlayer {
+    public void moves() {
         System.out.println("up.down,left,right,diagonal");
     }
 }
-class Rook implements ChessPlayer{
-    public  void moves(){
-          System.out.println("up.down,left,right");
-      }
-  }
-  class King implements ChessPlayer{
-    public  void moves(){
-          System.out.println("up.down,left,right,diagonal(by 1 step)");
-      }
-  }
- // Define the Herbivore interface
+
+class Rook implements ChessPlayer {
+    public void moves() {
+        System.out.println("up.down,left,right");
+    }
+}
+
+class King implements ChessPlayer {
+    public void moves() {
+        System.out.println("up.down,left,right,diagonal(by 1 step)");
+    }
+}
+
+// Define the Herbivore interface
 interface Herbivore {
     void eatPlants();
 }
@@ -109,11 +113,10 @@ interface Carnivore {
 
 // Implementing both interfaces in a class
 class Bear implements Herbivore, Carnivore {
-   
+
     public void eatPlants() {
         System.out.println("The bear is eating plants.");
     }
-
 
     public void eatMeat() {
         System.out.println("The bear is eating meat.");
