@@ -19,7 +19,16 @@ public class Recursion {
          printInc(n-1);
          System.out.print(n + " ");
     }
-      
+        // print factorial of a number
+        public static int fact(int n){
+            if (n==0) {
+                return 1;
+            }
+            int fnm1= fact(n-1);
+            int fn=n*fact(n-1);
+            return fn;
+        }
+    
        
 
 
@@ -30,5 +39,8 @@ public class Recursion {
         // Print numbers from n to 1(Increasing Order)
             int n = 10;
             printInc(n);
+            // print factorial of a number
+            int n=5;
+         System.out.println(fact(n));
     }
 }
