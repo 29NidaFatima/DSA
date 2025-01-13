@@ -6,22 +6,24 @@ public class OOPspracticeQues {
         s.name = "Nida";
         System.out.println(s.name);
         // Q5
-        Vehicle obj1= new Car();
+        Vehicle obj1 = new Car();
         obj1.print();
-        Vehicle obj2= new Vehicle();
+        Vehicle obj2 = new Vehicle();
         obj2.print();
         // Q6
-        Vehicle obj1= new Car();
+        Vehicle obj1 = new Car();
         obj1.print1();
-        Vehicle obj2= new Vehicle();
+        Vehicle obj2 = new Vehicle();
         obj2.print();
         // Q8
-       System.out.println(Book.count);
-       Book b1=new Book(150);
-       Book b2= new Book(250);
-       System.out.println(Book.count);
-        
-
+        System.out.println(Book.count);
+        Book b1 = new Book(150);
+        Book b2 = new Book(250);
+        System.out.println(Book.count);
+            // Q9
+            Complex r =new Complex();
+            r.a=2;
+            
 
     }
 }
@@ -32,35 +34,58 @@ class Student {
     int marks;
 
 }
+
 // Q5
-class Vehicle{
-    void print(){
+class Vehicle {
+    void print() {
         System.out.println("Base class(Vehicle)");
     }
 }
-class Car extends Vehicle{
-    void print(){
+
+class Car extends Vehicle {
+    void print() {
         System.out.println("Derived class(Car)");
     }
 }
+
 // Q6
-class Vehicle{
-    void print(){
+class Vehicle {
+    void print() {
         System.out.println("Base class(Vehicle)");
     }
 }
-class Car extends Vehicle{
-    void print1(){
+
+class Car extends Vehicle {
+    void print1() {
         System.out.println("Derived class(Car)");
     }
 }
- Q8
- class Book{
+
+// Q8
+class Book {
     int price;
     static int count;
 
-    public Book(int price){
-        this.price=price;
+    public Book(int price) {
+        this.price = price;
         count++;
+    }
+
+    // Q9
+    class Complex {
+        int a;
+        float b;
+
+        void sum(int a, int b) {
+            System.out.println(a + b);
+        }
+
+        void difference(int a, int b) {
+            System.out.println(a - b);
+        }
+
+        void product(int a, int b) {
+            System.out.println(a * b);
+        }
     }
 }
