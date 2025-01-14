@@ -26,11 +26,41 @@ public class Recursion {
         if (n == 0) {
             return 1;
         }
-        int fnm1 = fact(n - 1);
+        // int fnm1 = fact(n - 1);
         int fn = n * fact(n - 1);
         return fn;
     }
-
+    // print sum of the first n natural number
+    public static int naturalNumSum(int n){
+        //Base Case
+if (n==1) {
+    return 1;
+}
+int Sn=n+naturalNumSum(n-1);
+return Sn;
+    }
+// Print Nth fibonacci number
+public static int fibonacciNum(int n){
+        //Base Case
+    if (n==0 || n==1) {
+        return n;
+    } 
+    int fnm1= fibonacciNum(n-1);
+    int fnm2=fibonacciNum(n-2);
+    int fn=fnm1+fnm2;
+    return fn;
+}
+            Check if a given array is sorted or not
+            public static boolean isSorted(int arr[],int i){
+                //Base case
+                if (i==arr.length-1) {
+                    return true;
+                }
+if (arr[i]>arr[i+1]) {
+    return false;
+}
+return isSorted(arr, i+1);
+            }
     public static void main(String[] args) {
         // Print numbers from n to 1(Decreasing Order)
         int n = 10;
@@ -41,5 +71,12 @@ public class Recursion {
         // print factorial of a number
         int n = 5;
         System.out.println(fact(n));
+            // print sum of the first n natural number
+            System.out.println(naturalNumSum(5));
+            // Print Nth fibonacci number
+            System.out.println(fibonacciNum(7));
+            Check if a given array is sorted or not
+            int arr[]={1,2,3,4,5};
+            System.out.println(isSorted(arr, 0));
     }
 }
