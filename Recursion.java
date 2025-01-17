@@ -1,37 +1,40 @@
 public class Recursion {
     // Print numbers from n to 1(Decreasing Order)
     public static void printDec(int n) {
-    // Base Case
-    if (n == 1) {
-    System.out.println(n);
-    return;
-    }
-    System.out.print(n + " ");
-    printDec(n - 1);
+        // Base Case
+        if (n == 1) {
+            System.out.println(n);
+            return;
+        }
+        System.out.print(n + " ");
+        printDec(n - 1);
     }
 
     // Print numbers from n to 1(Increasing Order)
     public static void printInc(int n) {
-    // Base Case
-    if (n == 1) {
-    System.out.print(n + " ");
-    return;
-    }
-    printInc(n - 1);
-    System.out.print(n + " ");
+        // Base Case
+        if (n == 1) {
+            System.out.print(n + " ");
+            return;
+        }
+        printInc(n - 1);
+        System.out.print(n + " ");
     }
 
-    // print factorial of a number
+    // print factorial of a number TC:0(n)
     public static int fact(int n) {
-    if (n == 0) {
-    return 1;
-    }
-    // int fnm1 = fact(n - 1);
-    int fn = n * fact(n - 1);
-    return fn;
+        // Base Case
+        if (n == 0) {
+            return 1;
+        }
+        // int fnm1 = fact(n - 1);
+        // int fn = n * fact(n - 1);
+        // return fn;
+        // ---------------
+        return n * fact(n - 1);
     }
 
-    // print sum of the first n natural number
+    // print sum of the first n natural number TC:0(n)
     public static int naturalNumSum(int n) {
     // Base Case
     if (n == 1) {
@@ -41,70 +44,72 @@ public class Recursion {
 
     // Print Nth fibonacci number
     public static int fibonacciNum(int n) {
-    // Base Case
-    if (n == 0 || n == 1) {
-    return n;
-    }
-    int fnm1 = fibonacciNum(n - 1);
-    int fnm2 = fibonacciNum(n - 2);
-    int fn = fnm1 + fnm2;
-    return fn;
+        // Base Case
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        int fnm1 = fibonacciNum(n - 1);
+        int fnm2 = fibonacciNum(n - 2);
+        int fn = fnm1 + fnm2;
+        return fn;
+
     }
     // check if a given array is sorted or not
 
     public static boolean isSorted(int arr[], int i) {
-    // Base case
-    if (i == arr.length - 1) {
-    return true;
-    }
-    if (arr[i] > arr[i + 1]) {
-    return false;
-    }
-    return isSorted(arr, i + 1);
+        // Base case
+        if (i == arr.length - 1) {
+            return true;
+        }
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+        return isSorted(arr, i + 1);
     }
 
     // write a function to find the first occurence of an element in an array
     public static int firstOccurence(int arr[], int key, int i) {
-    // Base case
-    if (i == arr.length) {
-    return -1;
-    }
-    if (arr[i] == key) {
-    return i;
-    }
-    return firstOccurence(arr, key, i + 1);
+        // Base case
+        if (i == arr.length) {
+            return -1;
+        }
+        if (arr[i] == key) {
+            return i;
+        }
+        return firstOccurence(arr, key, i + 1);
     }
 
     // write a function to find the last occurence of an element in an array
     public static int lastOccurence(int arr[], int key, int i) {
-    // Base case
-    if (i == arr.length) {
-    return -1;
-    }
-    int isFound = lastOccurence(arr, key, i + 1);
-    if (isFound != -1 && arr[i] == key) {
-    return i;
-    }
-    return isFound;
+        // Base case
+        if (i == arr.length) {
+            return -1;
+        }
+        int isFound = lastOccurence(arr, key, i + 1);
+        if (isFound != -1 && arr[i] == key) {
+            return i;
+        }
+        return isFound;
     }
 
     // Print x pow(n) in O(n)
     public static int power(int x, int n) {
-    // Base case
-    if (n == 0) {
-    return 1;
-    }
-    return x * power(x, n - 1);
-    }
-    // Print x pow(n) in O(logn)
-    public static int optimizedPower(int x, int n) {
-        //base case
-        if (n==0) {
+        // Base case
+        if (n == 0) {
             return 1;
         }
-        int halfPower=optimizedPower(x, n / 2);
+        return x * power(x, n - 1);
+    }
+
+    // Print x pow(n) in O(logn)
+    public static int optimizedPower(int x, int n) {
+        // base case
+        if (n == 0) {
+            return 1;
+        }
+        int halfPower = optimizedPower(x, n / 2);
         // if n is even
-        int halfPowersq = halfPower*halfPower;
+        int halfPowersq = halfPower * halfPower;
         // if n is odd
         if (n % 2 != 0) {
             halfPowersq = x * halfPowersq;
