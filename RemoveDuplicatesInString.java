@@ -7,7 +7,7 @@ if (index==str.length()) {
 }
 char currChar=str.charAt(index);
 if (map[currChar-'a']==true) {
-    removeDuplicates(str, index+1, newStr, map);
+    removeDuplicates(str, index+1, newStr, map);  
 }else{
     map[currChar-'a']=true;
     removeDuplicates(str, index+1, newStr.append(currChar), map);
