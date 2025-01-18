@@ -1,4 +1,4 @@
-package Recursion;
+
 public class tillingproblem {
     public static int tillingProblem(int n) {
         //Base Case
