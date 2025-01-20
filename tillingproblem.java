@@ -9,6 +9,7 @@ public class tillingproblem {
         int fnm2 = tillingProblem(n - 2);
         int totalWays=fnm1 + fnm2;
         return  totalWays;
+
     }
 
     public static void main(String[] args) {
