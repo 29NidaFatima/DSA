@@ -1,5 +1,5 @@
 
-public class Recursion {
+public class RecursionBasic {
     // Print numbers from n to 1(Decreasing Order)
     public static void printDec(int n) {
         // Base Case
