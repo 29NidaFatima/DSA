@@ -16,6 +16,6 @@ public class FriendsPairingproblem {
     
     
     public static void main(String[] args) {
-        System.out.println(friendsPairingProblem(6));
+        System.out.println(friendsPairingProblem(4));
     }
 }
