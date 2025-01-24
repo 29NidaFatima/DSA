@@ -12,9 +12,7 @@ public class FriendsPairingproblem {
         // return totalWays;
         // // Another way to write above code in less no.of line
         return  friendsPairingProblem(n - 1)+(n - 1) * friendsPairingProblem(n - 2);
-    }
-    
-    
+}
     public static void main(String[] args) {
         System.out.println(friendsPairingProblem(3));
     }
