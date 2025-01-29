@@ -22,7 +22,7 @@ public class MergeSort {
     public static void merge(int arr[], int si, int mid, int ei) {
         int temp[] = new int[ei - si + 1]; // Corrected size of temp array
         int i = si; // iterator for left part
-        int j = mid + 1; // iterator for right part
+        int j = mid + 1;  // iterator for right part
         int k = 0; // iterator for temp array
 
         // Merge the two halves into the temp array
@@ -40,7 +40,7 @@ public class MergeSort {
 
         // Copy remaining elements of the left half, if any
         while (i <= mid) {
-            temp[k++] = arr[i++];
+            temp[k++] = arr[i++]; 
         }
 
         // Copy remaining elements of the right half, if any
