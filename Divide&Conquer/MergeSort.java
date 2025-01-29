@@ -1,61 +1,62 @@
+
 public class MergeSort {
-  
-        public static void printArr(int arr[]) {
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-            }
-            System.out.println(); 
+
+    public static void printArr(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
-    
-        public static void mergeSort(int arr[], int si, int ei) {
-            // BASE CASE
-            if (si >= ei) {
-                return;
-            }
-            int mid = si + (ei - si) / 2;
-            mergeSort(arr, si, mid); // for left part -> sort
-            mergeSort(arr, mid + 1, ei); // for right part -> sort
-            merge(arr, si, mid, ei);
+        System.out.println();
+    }
+
+    public static void mergeSort(int arr[], int si, int ei) {
+        // BASE CASE
+        if (si >= ei) {
+            return;
         }
-    
-        public static void merge(int arr[], int si, int mid, int ei) {
-            int temp[] = new int[ei - si + 1]; // Corrected size of temp array
-            int i = si; // iterator for left part
-            int j = mid + 1; // iterator for right part
-            int k = 0; // iterator for temp array
-    
-            // Merge the two halves into the temp array
-            while (i <= mid && j <= ei) {
-                if (arr[i] < arr[j]) {
-                    temp[k] = arr[i];
-                    i++;
-                } else {
-                    temp[k] = arr[j];
-                    j++;
-                }
-                k++;
+        int mid = si + (ei - si) / 2;
+        mergeSort(arr, si, mid); // for left part -> sort
+        mergeSort(arr, mid + 1, ei); // for right part -> sort
+        merge(arr, si, mid, ei);
+    }
+
+    public static void merge(int arr[], int si, int mid, int ei) {
+        int temp[] = new int[ei - si + 1]; // Corrected size of temp array
+        int i = si; // iterator for left part
+        int j = mid + 1; // iterator for right part
+        int k = 0; // iterator for temp array
+
+        // Merge the two halves into the temp array
+        while (i <= mid && j <= ei) {
+            if (arr[i] < arr[j]) {
+                temp[k] = arr[i];
+                i++;
+            } else {
+                temp[k] = arr[j];
+                j++;
             }
-    
-            // Copy remaining elements of the left half, if any
-            while (i <= mid) {
-                temp[k++] = arr[i++];
-            }
-    
-            // Copy remaining elements of the right half, if any
-            while (j <= ei) {
-                temp[k++] = arr[j++];
-            }
-    
-            // Copy temp array back to the original array
-            for (k = 0, i = si; k < temp.length; k++, i++) {
-                arr[i] = temp[k];
-            }
+            k++;
         }
-    
-        public static void main(String[] args) {
-            int arr[] = {6, 3, 9, 5, 2, 8};
-            mergeSort(arr, 0, arr.length - 1);
-            printArr(arr); // Print the sorted array
+        
+
+        // Copy remaining elements of the left half, if any
+        while (i <= mid) {
+            temp[k++] = arr[i++];
+        }
+
+        // Copy remaining elements of the right half, if any
+        while (j <= ei) {
+            temp[k++] = arr[j++];
+        }
+
+        // Copy temp array back to the original array
+        for (k = 0, i = si; k < temp.length; k++, i++) {
+            arr[i] = temp[k];
         }
     }
 
+    public static void main(String[] args) {
+        int arr[] = {6, 3, 9, 5, 2, 8};
+        mergeSort(arr, 0, arr.length - 1);
+        printArr(arr); // Print the sorted array
+    }
+}
