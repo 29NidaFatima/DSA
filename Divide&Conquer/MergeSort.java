@@ -36,11 +36,10 @@ public class MergeSort {
             }
             k++;
         }
-        
 
         // Copy remaining elements of the left half, if any
         while (i <= mid) {
-            temp[k++] = arr[i++]; 
+            temp[k++] = arr[i++];
         }
 
         // Copy remaining elements of the right half, if any
