@@ -55,9 +55,9 @@ public class MergeSortStrings {
     }
 
     public static void main(String[] args) {
-        String arr[] = { "sun", "earth", "mars", "mercury" };
+        String arr[] = {"sun", "earth", "mars", "mercury"};
         mergesortString(arr, 0, arr.length - 1);
-        
+
         // Print the sorted array
         printArr(arr);
     }
