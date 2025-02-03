@@ -18,7 +18,7 @@ public class searchInRotatedArray {
             // Case A: Target in left sorted part
             if (target >= arr[si] && target <= arr[mid]) {
                 return search(arr, target, si, mid - 1);
-            } else {
+            } else { 
                 // Case B: Target in right part
                 return search(arr, target, mid + 1, ei);
             }
