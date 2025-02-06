@@ -1,5 +1,4 @@
 public class CountInversion {
-
     public static int countInversion(int arr[], int si, int ei) {
         if (si >= ei) {
             return 0; // Base case: no inversions in a single element or empty array
