@@ -1,4 +1,5 @@
-public class NQueensWays {
+
+public class CountWays {
     public static boolean isSafe(char board[][], int row, int col) {
         // Vertical up
         for (int i = row - 1; i >= 0; i--) {
@@ -20,11 +21,11 @@ public class NQueensWays {
         }
         return true;
     }
-
+ static int count=0;
     public static void nQueens(char board[][], int row) {
         // Base case: If all queens are placed, print the board
         if (row == board.length) {
-            printBoard(board);
+          count++;
             return;
         }
 
@@ -37,18 +38,10 @@ public class NQueensWays {
         }
     }
 
-    public static void printBoard(char board[][]) {
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                System.out.print(board[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("--------CHESS BOARD------"); // Separator between solutions
-    }
+ 
 
     public static void main(String[] args) {
-        int n = 4; // Can be changed to any value
+        int n = 5; // Can be changed to any value
         char board[][] = new char[n][n];
 
         // Initialize board with '.'
@@ -59,5 +52,6 @@ public class NQueensWays {
         }
 
         nQueens(board, 0);
+        System.out.println("total way to solve N-queens="+ count);
     }
 }
