@@ -19,7 +19,7 @@ public class GridWays {
     }
 
     public static void main(String[] args) {
-        int n = 4, m = 4;
+        int n = 3, m = 3;
         System.out.println(countGridWays(0, 0, n, m));
     }
 }
