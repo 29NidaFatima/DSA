@@ -44,7 +44,7 @@ public class NQueensWays {
             }
             System.out.println();
         }
-        System.out.println("--------------------"); // Separator between solutions
+        System.out.println("--------CHESS BOARD------"); // Separator between solutions
     }
 
     public static void main(String[] args) {
