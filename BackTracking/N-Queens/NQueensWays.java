@@ -39,13 +39,14 @@ public class NQueensWays {
     }
 
     public static void printBoard(char board[][]) {
+        System.out.println("--------CHESS BOARD------"); // Separator between solutions
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 System.out.print(board[i][j] + " ");
             }
             System.out.println();
         }
-        System.out.println("--------CHESS BOARD------"); // Separator between solutions
+       
     }
 
     public static void main(String[] args) {
