@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class CheckPrimeNumber {
     public static boolean isPrime(int number) {
         int count = 0; // Count the number of factors
@@ -26,10 +25,23 @@ public class CheckPrimeNumber {
         }
     }
 }
+// //------------------ BruteForce-----------------
+public static boolean isPrime(int number) {
+    if (number < 2) return false; // 0 and 1 are not prime
+    if (number == 2) return true; // 2 is prime
+
+    // Check divisibility from 2 to number - 1
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0) {
+            return false; // Found a divisor, not prime
+        }
+    }
+    return true; // No divisors found, prime
+}
 
 //  -------------------Another Optimized Appraoch--------------------
 
-public class CheckPrimeNumber {
+public class  isPrime(int number){
     public static boolean isPrime(int number) {
         if (number < 2) return false; // 0 and 1 are not prime
         if (number == 2 || number == 3) return true; // 2 and 3 are prime numbers
