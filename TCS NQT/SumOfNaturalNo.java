@@ -8,8 +8,8 @@ public class SumOfNaturalNo {
         }
         return sum;
     }
-      
-                public static void main(String[] args) {
+
+    public static void main(String[] args) {
         int sum = sum(10);
         System.out.println("Sum of 10 Natural numbers is:" + sum);
     }
@@ -17,6 +17,7 @@ public class SumOfNaturalNo {
 
 //------------Optimized code----------
 public class SumOfNaturalNo {
+
     public static int sum(int n) {
         return (n * (n + 1)) / 2; // O(1) Time Complexity
     }
@@ -26,4 +27,3 @@ public class SumOfNaturalNo {
         System.out.println("Sum of 10 Natural numbers is: " + sum);
     }
 }
-
