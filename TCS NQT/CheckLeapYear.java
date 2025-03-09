@@ -14,7 +14,7 @@ public class CheckLeapYear {
         }
     }
 }
-//     --------------Another apporach----------------
+//     --------------Optimized code----------------
 
 public class CheckLeapYear {
 
