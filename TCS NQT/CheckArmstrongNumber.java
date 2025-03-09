@@ -1,26 +1,25 @@
-
 public class CheckArmstrongNumber {
 
-    public static boolean isArmstrong(int n) { // Return type changed to boolean
-        String str = String.valueOf(n);  // Number gets converted into String
-        int total_Digits = str.length();
-        int sum = 0, temp = n;
+    public static boolean isArmstrong(int number) {
+        int originalNumber = number;
+        int sum = 0;
+        int numberOfDigits = String.valueOf(number).length();
 
-        while (temp > 0) {
-            int digit = temp % 10;
-            sum += Math.pow(digit, total_Digits); // Use Math.pow()
-            temp = temp / 10;
+        while (number > 0) {
+            int digit = number % 10;
+            sum += Math.pow(digit, numberOfDigits);
+            number /= 10;
         }
 
-        return sum == n; // Return statement inside method
-    } 
+        return sum == originalNumber;
+    }
 
     public static void main(String[] args) {
-        int n = 153;
-        if (isArmstrong(n)) {
-            System.out.println(n + " is an Armstrong number.");
+        int number = 153;
+        if (isArmstrong(number)) {
+            System.out.println(number + " is an Armstrong number.");
         } else {
-            System.out.println(n + " is not an Armstrong number.");
+            System.out.println(number + " is not an Armstrong number.");
         }
     }
 }
