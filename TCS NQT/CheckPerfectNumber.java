@@ -1,7 +1,7 @@
 //--------BRUTE FORCE APPROACH-----------
 import java.util.Scanner;
 
-public class "CheckPerfectNumber" {
+public class CheckPerfectNumber {
     public static boolean isPerfect(int n) {
         int sum = 1;
         for (int i = 1; i*1< n; i++) {
