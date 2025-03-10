@@ -9,6 +9,6 @@ return Integer.parseInt(k);
          int n =1004;
        int result=convertFive(n);
        System.out.println(n  +" is the original number");
-       System.out.println( "After replacing 0 to 5" + result );
+       System.out.println("Number after replacing 0 with 5: " + result);
      }
 }
