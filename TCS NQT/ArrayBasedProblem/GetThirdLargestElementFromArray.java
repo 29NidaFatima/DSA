@@ -22,7 +22,7 @@ public class GetThirdLargestElementFromArray {
         System.out.println("Third Largest element of Array is:" + result);
 
     }
-}
+// }
 // -------------OPTIMIZED CODE-----------
 
 
