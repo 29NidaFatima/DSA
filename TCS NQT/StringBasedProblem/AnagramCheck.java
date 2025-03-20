@@ -3,6 +3,7 @@ public class AnagramCheck {
         if (str1.length() != str2.length()) return false;
 
         int[] charCount = new int[26]; // Assuming only lowercase English letters
+      
 
         for (int i = 0; i < str1.length(); i++) {
             charCount[str1.charAt(i) - 'a']++;  // Increment count for str1
@@ -20,6 +21,7 @@ public class AnagramCheck {
         String str1 = "listen";
         String str2 = "silent";
       System.out.println(  isAnagram(str1, str2));
+      S
 
     }
 }
