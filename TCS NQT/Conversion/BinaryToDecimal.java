@@ -1,3 +1,4 @@
+
 public class BinaryToDecimal {
     public static int binToDec(String binary) {
         int dec = 0;
