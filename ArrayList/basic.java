@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class basic {
 
@@ -36,6 +37,12 @@ public class basic {
         for (int i = 0; i < list0.size(); i++) {
             System.out.print(list0.get(i)+" ");
         }
-
+        System.out.println();
+        //sort an AL
+        Collections.sort(list0); //ascending is by default
+System.out.println(list0);
+// descending
+ Collections.sort(list0,Collections.reverseOrder());
+ System.out.println(list0);
     }
 }
