@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class mostWater {
-     // Brute Force Approach (commented out but kept as-is)
+     // Brute Force Approach
     // public static int storeWater(ArrayList<Integer> height) {
     //     int maxWater = 0;
     //     for (int i = 0; i < height.size(); i++) {
