@@ -17,12 +17,15 @@ public class pairSumOne {
 int s=0;
 int e=list.size();
 while (s<e) {
+    // case 1
     if (list.get(s)+list.get(e)==target) {
         return true;
     }
+    // case 2
     else if(list.get(s)+list.get(e)<target){
         s++;
     }
+    // case 3
     else{
         e--;
     }
