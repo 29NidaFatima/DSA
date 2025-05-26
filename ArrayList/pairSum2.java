@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class pairSum2 {
     public static boolean pairSumTwo(ArrayList<Integer> list, int target) {
         int n = list.size();
-        int bp = -1; // Breakpoint (largest element index)
+        int bp = -1; // Breakpoint 
 
         // Find the index where the rotation happens (i.e., breakpoint)
         for (int i = 0; i < n - 1; i++) { // ✅ Avoid out-of-bounds
