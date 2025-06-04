@@ -42,7 +42,7 @@ public class pairSum2 {
         list.add(10);
 
         int target = 16;
-        boolean result = pairSumTwo(list, target); // ✅ Boolean, not int
+        boolean result = pairSumTwo(list, target); 
         System.out.println("Pair with sum " + target + " exists: " + result);
     }
 }
