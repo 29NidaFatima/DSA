@@ -284,6 +284,7 @@ public static void removeCycle(Node head) {
     
 
     public static void main(String[] args) {
+                // --------------------part-2--------------
         //     LinkedList ll = new LinkedList();
 
         //     ll.addFirst(2);
@@ -318,7 +319,7 @@ public static void removeCycle(Node head) {
         //   head.next.next=new Node(3);
         //     head.next.next.next=head;
         //     System.out.println(isCycle());
-        // --------------------
+        // --------------------part-2--------------
         head = new Node(1);
         Node temp = new Node(2);
         head.next = temp;
