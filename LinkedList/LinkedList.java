@@ -284,42 +284,43 @@ public static void removeCycle(Node head) {
     
 
     public static void main(String[] args) {
-                // --------------------part-2--------------
-        //     LinkedList ll = new LinkedList();
+                PART-1
+            LinkedList ll = new LinkedList();
 
-        //     ll.addFirst(2);
-        //     ll.addFirst(1);
-        //     ll.addLast(4);
-        //     ll.addLast(5);
-        //     ll.addMiddle(2, 3);
-        //     ll.print();
-        //     ll.removeFirst();
-        //     ll.print();
-        //     ll.removeLast();
-        //     ll.print();
-        //     System.out.println("Size: " + ll.size);
-        //     System.out.println("Index of 3 : " + ll.itrSearch(3));
-        //     System.out.println("Index of 10: " + ll.itrSearch(10));
-        //     System.out.println("Index of 3 (recursive): " + ll.recSearch(3));
-        //     System.out.println("Index of 10 (recursive): " + ll.recSearch(10));
-        //     ll.reverse();
-        //     ll.print();
-        //     ll.deleteNthfromEnd(3);
-        //     ll.print();
-        //     ll.addFirst(1);
-        //     ll.addFirst(2);
-        //     ll.addLast(2);
-        //     ll.addLast(1);
-        //      ll.print(); //1->2->2->1->null
-        //    System.out.println(ll.checkPalindrome());
-        // PART 2
-        // --------------------
-        // head= new Node(1);
-        // head.next=new Node(2);
-        //   head.next.next=new Node(3);
-        //     head.next.next.next=head;
-        //     System.out.println(isCycle());
-        // --------------------part-2--------------
+            ll.addFirst(2);
+            ll.addFirst(1);
+            ll.addLast(4);
+            ll.addLast(5);
+            ll.addMiddle(2, 3);
+            ll.print();
+            ll.removeFirst();
+            ll.print();
+            ll.removeLast();
+            ll.print();
+            System.out.println("Size: " + ll.size);
+            System.out.println("Index of 3 : " + ll.itrSearch(3));
+            System.out.println("Index of 10: " + ll.itrSearch(10));
+            System.out.println("Index of 3 (recursive): " + ll.recSearch(3));
+            System.out.println("Index of 10 (recursive): " + ll.recSearch(10));
+            ll.reverse();
+            ll.print();
+            ll.deleteNthfromEnd(3);
+            ll.print();
+            ll.addFirst(1);
+            ll.addFirst(2);
+            ll.addLast(2);
+            ll.addLast(1);
+             ll.print(); //1->2->2->1->null
+           System.out.println(ll.checkPalindrome());
+
+        PART 2
+        
+        head= new Node(1);
+        head.next=new Node(2);
+          head.next.next=new Node(3);
+            head.next.next.next=head;
+            System.out.println(isCycle());
+ 
         head = new Node(1);
         Node temp = new Node(2);
         head.next = temp;
