@@ -67,7 +67,7 @@ public class mergeSort {
         }
 
         Node mid = getMid(head);
-    
+      
         Node rightHead = mid.next;
         mid.next = null;
 
