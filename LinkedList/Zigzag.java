@@ -33,7 +33,7 @@ public class Zigzag {
     public void zigZag() {
         // Step 1: Find mid
         Node slow = head;
-        Node fast = head.next;
+        Node fast = head.next; 
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

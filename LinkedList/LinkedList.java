@@ -145,7 +145,7 @@ public class LinkedList {
         Node next;
         while (curr != null) {
             next = curr.next;
-            curr.next = prev;
+          
             prev = curr;
             curr = next;
         }
@@ -185,8 +185,10 @@ public class LinkedList {
         // Step 5: Delete the node
         prev.next = prev.next.next;
     }
-    // Step 1
 
+
+
+    // Step 1
     public Node findMid(Node head) {
         Node slow = head;
         Node fast = head;
