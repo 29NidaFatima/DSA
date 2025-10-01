@@ -1,25 +1,29 @@
 
-import java.util.ArrayList;
-
 public class StackBasic {
 
-    //Stack implementation by ArrayList
-    static class Stack {
+    static class Node {
+        int data;
+        Node next;
 
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    static class Stack {
+  //Stack implementation by ArrayList
         static ArrayList<Integer> list = new ArrayList<>();
 
         //isEmptyFn
         public static boolean isEmpty() {
             return list.size() == 0;
         }
-
         //push
         public static void push(int data) {
             list.add(data);
-
         }
-
-        //pop
+        pop
         public static int pop() {
             if (isEmpty()) {
                 return -1;
@@ -28,10 +32,46 @@ public class StackBasic {
             list.remove(list.size() - 1);
             return top;
         }
+        peek
+        public static int peek() {
+            return list.get(list.size() - 1);
+        }
+
+        //Stack implementation by LinkedList
+        static Node head = null;
+        //isEmptyFn
+
+        public static boolean isEmpty() {
+            return head == null;
+        }
+        //push
+
+        public static void push(int data) {
+            Node newNode = new Node(data);
+            if (isEmpty()) {
+                head = newNode;
+                return;
+            }
+            newNode.next = head;
+            head = newNode;
+        }
+
+        //pop
+        public static int pop() {
+            if (isEmpty()) {
+                return -1;
+            }
+            int top = head.data;
+            head = head.next;
+            return top;
+        }
 
         //peek
         public static int peek() {
-            return list.get(list.size() - 1);
+            if (isEmpty()) {
+                return -1;
+            }
+            return head.data;
         }
 
     }
