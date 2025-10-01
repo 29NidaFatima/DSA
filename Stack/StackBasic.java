@@ -23,7 +23,7 @@ public class StackBasic {
         public static void push(int data) {
             list.add(data);
         }
-        pop
+         // pop
         public static int pop() {
             if (isEmpty()) {
                 return -1;
@@ -32,7 +32,7 @@ public class StackBasic {
             list.remove(list.size() - 1);
             return top;
         }
-        peek
+         // peek
         public static int peek() {
             return list.get(list.size() - 1);
         }
