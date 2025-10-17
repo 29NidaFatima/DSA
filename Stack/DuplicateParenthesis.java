@@ -13,15 +13,12 @@ public class DuplicateParenthesis {
             //closing
             if (ch == ')') {
                 int count = 0;
-                while (s.peek() != '(') {
-                    s.pop();
+                while (s.pop() != '(') {
                     count++;
                 }
                 if (count < 1) {
                     return true; // duplicate exist
-                } else {
-                    s.pop(); //opening pair pop
-                }
+                } 
 
             } else {
                 s.push(ch);
